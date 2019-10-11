@@ -20,7 +20,7 @@ def triangle_koch(n, llargada):
 
 def floc_koch2(n, llargada):
     for i in range(3):
-        patro(n, llargada)
+        triangle_koch(n, llargada)
         turtle.right(120)
 
 
