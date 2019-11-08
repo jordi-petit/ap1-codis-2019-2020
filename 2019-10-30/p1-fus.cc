@@ -36,11 +36,11 @@ void fusio(vector<double>& v, int esq, int mig, int dre) {
 
 
 void ordenacio_per_fusio(vector<double>& v, int esq, int dre) {
-    if (dre - esq > 1) {
+    if (dre - esq >= 1) {
         int mig = (esq + dre) / 2;
-        ordenacio_per_fusio_rec(v, esq, mig);
+        ordenacio_per_fusio(v, esq, mig);
         // v[esq..mig] està ordenat
-        ordenacio_per_fusio_rec(v, mig + 1, dre);
+        ordenacio_per_fusio(v, mig + 1, dre);
         // v[mig+1..dre] està ordenat
         fusio(v, esq, mig, dre);
         // v[esq..dre] està ordenat
