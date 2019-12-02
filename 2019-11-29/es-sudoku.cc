@@ -77,8 +77,7 @@ bool es_correcte_per_columnes(const Sudoku& s) {
 bool es_correcte_per_caixes(const Sudoku& s) {
     for (int ci = 0; ci < 3; ++ci) {
         for (int cj = 0; cj < 3; ++cj) {
-            if (not es_correcta
-           e_caixa(s, ci, cj)) {
+            if (not es_correcte_caixa(s, ci, cj)) {
                 return false;
             }
         }
